@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package technews_api.v1alpha1.search.common;
+
+message CategoryMetadata {
+    string           name = 1;
+    string           url = 2;
+    repeated CategoryMetadata           sub_categories = 3;            
+}
+
+message ArticleMetadata {
+    string           title = 1;
+    string           url = 2;
+    repeated string           contents = 3;            
+}

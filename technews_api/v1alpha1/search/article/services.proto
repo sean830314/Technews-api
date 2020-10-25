@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package technews_api.v1alpha1.search.article;
+
+import "technews_api/v1alpha1/search/common/metadata.proto";
+
+message ListArticlesRequest {
+    string           category_url = 1;
+    int32            num_page = 2;
+}
+
+message ListArticlesResponse {
+    repeated common.ArticleMetadata                    articles     = 1;
+}
+
+// python -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. .\technews_api\v1alpha1\search\server.proto

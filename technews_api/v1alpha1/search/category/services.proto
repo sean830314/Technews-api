@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package technews_api.v1alpha1.search.category;
+
+import "technews_api/v1alpha1/search/common/metadata.proto";
+
+message ListCategoriesRequest {
+    string           source = 1;
+}
+
+message ListCategoriesResponse {
+    repeated common.CategoryMetadata                    categories     = 1;
+}
+
