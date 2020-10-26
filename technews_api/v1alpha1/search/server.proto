@@ -5,11 +5,16 @@ package technews_api.v1alpha1.search;
 import "technews_api/v1alpha1/search/category/services.proto";
 import "technews_api/v1alpha1/search/article/services.proto";
 
-service SearchService {
+service SearchService
+{
     rpc ListCategories(category.ListCategoriesRequest)
-        returns (category.ListCategoriesResponse){}
+        returns (category.ListCategoriesResponse)
+    {
+    }
     rpc ListArticles(article.ListArticlesRequest)
-        returns (article.ListArticlesResponse){}
+        returns (article.ListArticlesResponse)
+    {
+    }
 }
 
 // python -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. .\technews_api\v1alpha1\search\server.proto
